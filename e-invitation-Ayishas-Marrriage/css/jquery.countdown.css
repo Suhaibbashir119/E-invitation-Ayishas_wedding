@@ -20,6 +20,6 @@ ul#hitungmundur li.separator {
 	vertical-align: top;
 }
 ul#hitungmundur li p {
-	color: #fff;
+	color: var(--maroon);
 	font-size: 16px;
 }

@@ -2,16 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="theme-color" content="#BC8887" />
+    <meta name="theme-color" content="#6D0F1F" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Wedding Invitation - Ayisha & Zeeshan</title>
 
     <meta property="og:title" content="Wedding Invitation - Ayisha & Zeeshan - Tuesday, October 20, 2026">
-    <meta property="og:description" content="Wedding Invitation - Ayisha & Zeeshan - Tuesday, October 20, 2026 at Bait ul assad, House no. 14. S. K colony, Qamarwari srinagar.">
+    <meta property="og:description" content="Wedding Invitation - Ayisha & Zeeshan - Tuesday, October 20, 2026 at Bait ul Assad, House No. 14, S.K. Colony, Qamarwari, Srinagar.">
     <meta property="og:locale" content="en_US" />
-    <meta property="og:image" content="https://simple-wedding-invitation.dae.ng/image/samantha-gades-x40Q9jrEVT0-unsplash.jpg">
-    <meta property="og:url" content="http://simple-wedding-invitation.dae.ng/index.html">
+    <meta property="og:image" content="https://simple-wedding-invitation-master-xi.vercel.app/image/og-cover.jpg">
+    <meta property="og:url" content="https://simple-wedding-invitation-master-xi.vercel.app/">
+    <link rel="canonical" href="https://simple-wedding-invitation-master-xi.vercel.app/">
     <meta name="twitter:card" content="summary_large_image">
     <!-- Bulma Version 0.8.x-->
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
@@ -94,16 +95,15 @@
         <!-- Begin Hero Content-->
         <div class="hero-body">
           <div class="container has-text-centered">
-            <p class="subtitle"> <b>Invitation from Begum Haji Assadullah Sheikh on her grand daughter's wedding.</b></p>
+            <p class="subtitle"> <b>Invitation from Begum Haji Assadullah Sheikh on her granddaughter's wedding.</b></p>
             <!-- <h1 class="subtitle">Wedding Invitation</h1> -->
             <h2 class="title">Ayisha & Zeeshan</h2>
             <h4 class="subtitle tempatwaktu">
               
                 Tuesday, October 20, 2026 
                 </br>
-                Bait ul assad, House no. 14. S. K colony,
+                Bait ul Assad, House No. 14, S.K. Colony, Qamarwari, Srinagar.
                 </br>
-                Qamarwari srinagar.
               
             </h4>
           </div>
@@ -121,23 +121,39 @@
             <div class="spasi">
             </div>
             <script type="text/javascript">
-              var now = new Date();
-              var day = now.getDate();
-              var month = now.getMonth() + 1;
-              var year = now.getFullYear() + 1;
-          
-              var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
-              var harih = '10/20/2026 17:00:00';
+              (function () {
+                var targetTime = Date.UTC(2026, 9, 20, 8, 30, 0);
+                var countdown = document.getElementById('hitungmundur');
+                var timer;
+                var fields = {
+                  days: countdown.querySelector('.days'),
+                  hours: countdown.querySelector('.hours'),
+                  minutes: countdown.querySelector('.minutes'),
+                  seconds: countdown.querySelector('.seconds')
+                };
 
-              $('#hitungmundur').countdown({
-                date: harih, // TODO Date format: 07/27/2017 17:00:00
-                offset: +7, // TODO Your Timezone Offset
-                day: 'Day',
-                days: 'Days'
-              }, function () {
-                alert('Done!');
-              });
-            </script>  
+                function updateCountdown() {
+                  var remaining = Math.max(0, targetTime - Date.now());
+                  var totalSeconds = Math.floor(remaining / 1000);
+                  var days = Math.floor(totalSeconds / 86400);
+                  var hours = Math.floor((totalSeconds % 86400) / 3600);
+                  var minutes = Math.floor((totalSeconds % 3600) / 60);
+                  var seconds = totalSeconds % 60;
+
+                  fields.days.textContent = String(days).padStart(2, '0');
+                  fields.hours.textContent = String(hours).padStart(2, '0');
+                  fields.minutes.textContent = String(minutes).padStart(2, '0');
+                  fields.seconds.textContent = String(seconds).padStart(2, '0');
+
+                  if (remaining === 0) {
+                    clearInterval(timer);
+                  }
+                }
+
+                updateCountdown();
+                timer = setInterval(updateCountdown, 1000);
+              }());
+            </script>
           </div>
           <!-- End Countdown -->
         </div>
@@ -181,13 +197,13 @@
      <section class="section-light no-padding-top regular-section has-text-centered has-vertically-aligned-content" id="regular-section">
         
         <div data-aos="fade-up" data-aos-easing="linear">
-          <img src="image/bismillah.png" class="bismillah has-text-centered" alt="Bismillahirrahmaanirrahiim">
+          <img src="image/bismillah.png" class="bismillah has-text-centered" alt="Bismillahirrahmaanirrahiim" loading="lazy">
         </div>
 
         <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
           Assalamu'alaikum Warahmatullahi Wabarakatuh.
           <br />
-          With the grace of Almighty Allah and hearts full of joy, we, Dr. Javid and Dr. Fahima, cordially invite you to celebrate the Nikah and wedding celebrations of our beloved daughter, Ayisha. Your presence and du'as (blessings) mean the world to our family. Please honor us with your presence as we welcome this beautiful new beginning.
+          With the grace of Almighty Allah and hearts full of joy, we, Begum Haji Assadullah Sheikh, Dr. Javid and Dr. Fahima, cordially invite you to celebrate the Nikah and wedding celebrations of our beloved daughter, Ayisha. Your presence and du'as (blessings) mean the world to our family. Please honor us with your presence as we welcome this beautiful new beginning.
         </p>
 
         <span class="space40px"></span>
@@ -205,7 +221,7 @@
         </div>
         <span class="space40px"></span>
         <div data-aos="fade-up" data-aos-easing="linear">
-          <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
+          <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~" loading="lazy">
         </div>
         <span class="space40px"></span>
         <span class="space40px"></span>
@@ -261,11 +277,7 @@
           <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
             <h1 class="title has-text-centered section-title">Location</h1>
             <p class="tempat is-larger has-text-centered">
-              <strong>Bait ul assad</strong>
-              <br>
-              House no. 14. S. K colony,  
-              <br>
-              Qamarwari srinagar.
+              <strong>Bait ul Assad, House No. 14, S.K. Colony, Qamarwari, Srinagar.</strong>
               <br>
             </p>
           </div>
@@ -305,11 +317,11 @@
             <div class="space40px"></div>
 
             <div style="max-width: 720px; margin: 0 auto; position: relative;">
-              <video id="wedding-video" src="image/wedding-video.mp4" width="100%" playsinline webkit-playsinline loop muted preload="auto" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); display: block; cursor: pointer;">
+              <video id="wedding-video" src="image/wedding-video.mp4" width="100%" playsinline webkit-playsinline loop muted preload="metadata" poster="image/evelina-friman-hw_sKmjb0ns-unsplash.jpg" style="border-radius: 8px; box-shadow: 0 4px 20px var(--shadow); display: block; cursor: pointer;">
                 <source src="image/wedding-video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
-              <button id="video-sound-toggle" type="button" aria-label="Toggle Sound" style="position: absolute; bottom: 16px; right: 16px; background: rgba(0, 0, 0, 0.65); color: #fff; border: 1px solid rgba(255,255,255,0.4); border-radius: 20px; padding: 6px 14px; font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 6px; backdrop-filter: blur(4px); transition: all 0.2s ease; z-index: 10;">
+              <button id="video-sound-toggle" type="button" aria-label="Toggle Sound" style="position: absolute; bottom: 16px; right: 16px; background: var(--maroon); color: var(--cream); border: 1px solid var(--green); border-radius: 20px; padding: 6px 14px; font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 6px; backdrop-filter: blur(4px); transition: all 0.2s ease; z-index: 10;">
                 <i class="fas fa-volume-mute" id="sound-icon"></i>
                 <span id="sound-text">Unmute</span>
               </button>
@@ -317,7 +329,7 @@
 
             <div class="space40px"></div>
             <div data-aos="fade-up" data-aos-easing="linear">
-              <img src="image/divider-leaves.png" class="divider has-vertically-align" alt="~~~">
+              <img src="image/divider-leaves.png" class="divider has-vertically-align" alt="~~~" loading="lazy">
             </div> 
             <div class="space40px"></div>
             <div class="space40px"></div>
@@ -341,6 +353,8 @@
                 <br>
                 With warm regards,
                 <br>
+                Begum Haji Assadullah Sheikh,
+                <br>
                 Dr. Javid & Dr. Fahima
                 </p>
      
@@ -349,7 +363,7 @@
 
               <div class="space40px"></div>
               <div data-aos="fade-up" data-aos-easing="linear">
-                <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
+                <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~" loading="lazy">
               </div>
               <div class="space40px"></div>
               <p class="h2 subtitle" data-aos="fade-up" data-aos-easing="linear">

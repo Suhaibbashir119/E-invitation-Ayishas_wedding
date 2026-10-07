@@ -39,10 +39,13 @@ window.onscroll = function() {
 };
 
 function scrollFunction() {
+  var toTop = document.getElementById("toTop");
+  if (!toTop) return;
+
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("toTop").style.display = "block";
+    toTop.style.display = "block";
   } else {
-    document.getElementById("toTop").style.display = "none";
+    toTop.style.display = "none";
   }
 }
 
@@ -55,9 +58,6 @@ $(document).ready(function($) {
 // Auto-play video on scroll without play bar & sound controls
 $(document).ready(function() {
   var video = document.getElementById("wedding-video");
-  var soundBtn = document.getElementById("video-sound-toggle");
-  var soundIcon = document.getElementById("sound-icon");
-  var soundText = document.getElementById("sound-text");
 
   if (!video) return;
 
@@ -119,22 +119,6 @@ $(document).ready(function() {
     }, { threshold: [0, 0.1, 0.25] });
 
     observer.observe(video);
-  }
-
-  // Toggle sound
-  if (soundBtn) {
-    soundBtn.addEventListener("click", function(e) {
-      e.stopPropagation();
-      if (video.muted) {
-        video.muted = false;
-        if (soundIcon) soundIcon.className = "fas fa-volume-up";
-        if (soundText) soundText.textContent = "Mute";
-      } else {
-        video.muted = true;
-        if (soundIcon) soundIcon.className = "fas fa-volume-mute";
-        if (soundText) soundText.textContent = "Unmute";
-      }
-    });
   }
 
   // Clicking video toggles play / pause
