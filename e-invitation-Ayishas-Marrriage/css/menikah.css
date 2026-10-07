@@ -954,7 +954,7 @@ a:focus-visible {
 .hero #hitungmundur,
 .hero #hitungmundur li,
 .hero #hitungmundur li p {
-  -webkit-text-stroke: 0.35px var(--maroon-dark);
+  -webkit-text-stroke: 0;
   text-shadow: 0 2px 4px var(--maroon-dark-86);
 }
 
@@ -972,6 +972,15 @@ a:focus-visible {
 
 .main-content .section-dark.contact .title,
 .main-content .section-dark.contact .subtitle {
+  color: var(--cream);
+}
+
+.main-content #Waktu .waktu,
+.main-content #Waktu .waktu strong,
+.main-content #lokasi .tempat,
+.main-content #lokasi .tempat strong,
+.main-content #lokasi .btn-cta,
+.main-content #lokasi .btn-cta:hover {
   color: var(--cream);
 }
 
